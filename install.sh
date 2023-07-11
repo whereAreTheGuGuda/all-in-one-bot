@@ -89,7 +89,7 @@ add_service() {
 cat > /etc/systemd/system/aio.service << EOF
 [Unit]
 Description=Aio Service
-Documentation=https://github.com/uerax/all-in-one-bot
+Documentation=https://github.com/whereAreTheGuGuda/all-in-one-bot
 After=network.target nss-lookup.target
 
 [Service]
@@ -117,7 +117,7 @@ update_aio() {
     env
     systemctl stop aio
     v=$(curl -sL $prj_url | grep "tag_name" | cut -d '"' -f 4)
-    url="https://github.com/uerax/all-in-one-bot/releases/download/$v/$assets"
+    url="https://github.com/whereAreTheGuGuda/all-in-one-bot/releases/download/$v/$assets"
     wget -q $url -O $project_dir/$prj_name
     chmod +x ${project_dir}/${prj_name}
     systemctl start aio
@@ -183,8 +183,8 @@ set_cfg() {
 menu() {
     echo -e "${Cyan}——————————————— 脚本信息 ———————————————${Font}"
     echo -e "\t${Yellow}    aio-bot 操作脚本${Font}"
-    echo -e "\t${Yellow}---authored by uerax---${Font}"
-    echo -e "\t${Yellow}https://github.com/uerax${Font}"
+    echo -e "\t${Yellow}---authored by whereAreTheGuGuda---${Font}"
+    echo -e "\t${Yellow}https://github.com/whereAreTheGuGuda${Font}"
     echo -e "\t${Yellow}    版本号：${version}${Font}"
     echo -e "${Cyan}——————————————— 操作向导 ———————————————${Font}"
     echo -e "${Green}1)   一键安装${Font}"

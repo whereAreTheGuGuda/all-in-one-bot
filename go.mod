@@ -1,4 +1,4 @@
-module github.com/uerax/all-in-one-bot
+module github.com/whereAreTheGuGuda/all-in-one-bot
 
 go 1.19
 
@@ -6,7 +6,7 @@ require (
 	github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.5.1
 	github.com/iawia002/lux v0.18.0
 	github.com/kkdai/youtube/v2 v2.8.0
-	github.com/uerax/goconf v1.0.4
+	github.com/whereAreTheGuGuda/goconf v1.0.4
 )
 
 require (
