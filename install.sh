@@ -16,7 +16,7 @@ Font="\033[0m"
 version=v0.0.7
 prj_name="aio"
 project_dir="/usr/local/bin"
-prj_url="https://api.github.com/repos/uerax/all-in-one-bot/releases/latest"
+prj_url="https://api.github.com/repos/whereAreTheGuGuda/all-in-one-bot/releases/latest"
 cfg_path="/usr/local/etc"
 log_url="/var/log/"
 assets="Aio-linux-64"
@@ -41,9 +41,9 @@ install() {
 
     # 下载链接
     
-    cfg_url="https://raw.githubusercontent.com/uerax/all-in-one-bot/master/all-in-one-bot.yml"
+    cfg_url="https://raw.githubusercontent.com/whereAreTheGuGuda/all-in-one-bot/master/all-in-one-bot.yml"
     v=$(curl -sL $prj_url | grep "tag_name" | cut -d '"' -f 4)
-    download_url="https://github.com/uerax/all-in-one-bot/releases/download/$v/$assets"
+    download_url="https://github.com/whereAreTheGuGuda/all-in-one-bot/releases/download/$v/$assets"
 
     # 创建项目目录
     mkdir -p "$project_dir"

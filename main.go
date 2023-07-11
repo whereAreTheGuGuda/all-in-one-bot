@@ -23,7 +23,7 @@ func main() {
 		log.Println(version)
 		return
 	}
-	defer func ()  {
+	defer func() {
 		if err := recover(); err != nil {
 			log.Printf("Runtime panic caught: %v\n", err)
 		}
