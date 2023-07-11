@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RELEASE_NOTES="Release notes"  # 发布说明
-prj_url="https://api.github.com/repos/uerax/all-in-one-bot/releases/latest"
+prj_url="https://api.github.com/repos/whereAreTheGuGuda/all-in-one-bot/releases/latest"
 version=$(curl -sL $prj_url | grep "tag_name" | cut -d '"' -f 4)
 
 read -rp "当前版本为: $version, 请输入新的版本号: " input
