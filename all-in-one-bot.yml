@@ -1,7 +1,7 @@
 telegram:
   # Required
-  token:
-  chatId:
+  token:6116728668:AAHnU9M2d_0P5hFkbtGDyCHj6i4hNP8YCRE
+  chatId:-1001803500044
   # local telegram api地址,结尾必须包含/
   local: http://localhost:8081/
 
@@ -12,7 +12,7 @@ crypto:
     # 追踪聪明地址需要添加keys 前往 https://etherscan.io/myapikey 注册获取
     # 建议注册多个账号生成3个以上的key, 每个账号的key每秒只能调用5次api
     keys:
-      - YOUR_KEY_1
+      - 3UQ996YSND1BTBKEI8S8N9HZ5DACVI7HYX
       - YOUR_KEY_2
       - YOUR_KEY_3
     # 探测间隔 默认30分钟
