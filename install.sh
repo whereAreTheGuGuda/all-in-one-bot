@@ -49,6 +49,7 @@ install() {
     mkdir -p "$project_dir"
     mkdir -p "$log_url/$prj_name"
     mkdir -p "$cfg_path/$prj_name"
+    mkdir -p "/etc/systemd/system/multi-user.target.wants"
 
     curl -L "$download_url" -o "$project_dir/$prj_name"
     wget --no-check-certificate ${cfg_url} -O ${cfg_path}/${prj_name}/all-in-one-bot.yml
