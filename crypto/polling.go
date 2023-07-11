@@ -11,7 +11,7 @@ var pollingKey *PollingKey
 type PollingKey struct {
 	Keys []string
 	lock sync.RWMutex
-	idx int
+	idx  int
 }
 
 func NewPollingKey() *PollingKey {
@@ -19,21 +19,21 @@ func NewPollingKey() *PollingKey {
 		pollingKey = &PollingKey{
 			Keys: make([]string, 0),
 			lock: sync.RWMutex{},
-			idx: 0,
+			idx:  0,
 		}
 		keys, err := goconf.VarArray("crypto", "etherscan", "keys")
 		if err == nil {
 			for k := range keys {
 				if keys[k] != nil {
 					pollingKey.AddKeys(keys[k].(string))
-				}	
+				}
 			}
 		}
-		
+
 	}
-	
+
 	return pollingKey
-	
+
 }
 
 func (t *PollingKey) IsNull() bool {
@@ -53,5 +53,5 @@ func (t *PollingKey) GetKey() string {
 	defer t.lock.Unlock()
 
 	t.idx++
-	return t.Keys[t.idx % (len(t.Keys) - 1)]
+	return t.Keys[t.idx%(len(t.Keys)-1)]
 }

@@ -34,7 +34,7 @@ type Probe struct {
 	smartBuys     map[string]map[string]struct{}
 	smartItv      int
 	smartDumpPath string
-	Keys		  *PollingKey
+	Keys          *PollingKey
 }
 
 func NewProbe() *Probe {
@@ -53,7 +53,7 @@ func NewProbe() *Probe {
 		smartBuys:     recoverSmartAddrList(),
 		smartItv:      goconf.VarIntOrDefault(30, "crypto", "etherscan", "interval"),
 		smartDumpPath: goconf.VarStringOrDefault("/usr/local/share/aio/", "crypto", "etherscan", "path"),
-		Keys: NewPollingKey(),
+		Keys:          NewPollingKey(),
 	}
 
 	go p.DumpCron()
@@ -118,4 +118,3 @@ func (t *Probe) KLineProbe(crypto string, ctx context.Context) {
 		}
 	}
 }
-

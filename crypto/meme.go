@@ -47,7 +47,7 @@ func (p *Probe) MemePrice(query string, chain string) {
 		if strings.Contains(check.LpTotalSupply, ".") {
 			check.LpTotalSupply = check.LpTotalSupply[:strings.Index(check.LpTotalSupply, ".")]
 		}
-		s += fmt.Sprintf("*Honeypot:* %s\n*Buy Tax:* %s | *Sell Tax:* %s\n*Total Supply:* %s\n*Total LP:* %0.2f\n*Holder:* %s\n*Locked LP:* %0.5f\n*Owner:* `%s`\n*Creator:* `%s`\n*Percent:* %s | *Balance:* %s\n",isHoneypot, check.BuyTax, check.SellTax, check.TotalSupply, pair.Lp.Usd, check.HolderCount,check.LpLockedTotal, check.OwnerAddress, check.CreatorAddress, check.CreatorPercent, check.CreatorBalance)
+		s += fmt.Sprintf("*Honeypot:* %s\n*Buy Tax:* %s | *Sell Tax:* %s\n*Total Supply:* %s\n*Total LP:* %0.2f\n*Holder:* %s\n*Locked LP:* %0.5f\n*Owner:* `%s`\n*Creator:* `%s`\n*Percent:* %s | *Balance:* %s\n", isHoneypot, check.BuyTax, check.SellTax, check.TotalSupply, pair.Lp.Usd, check.HolderCount, check.LpLockedTotal, check.OwnerAddress, check.CreatorAddress, check.CreatorPercent, check.CreatorBalance)
 	}
 
 	chainScan := ""
@@ -290,7 +290,7 @@ func (t *Probe) SmartAddr(addr string, offset string) {
 				msg.WriteString("): `")
 				msg.WriteString(v.ContractAddress)
 				msg.WriteString("`")
-				
+
 			}
 		}
 	}

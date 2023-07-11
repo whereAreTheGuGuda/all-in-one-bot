@@ -34,7 +34,7 @@ type Aio struct {
 	Sticker     *Sticker
 	Utils       *utils.Utils
 	Lists       *lists.Lists
-	Track 		*crypto.Track
+	Track       *crypto.Track
 }
 
 func (t *Aio) NewBot(token string, local string) {
