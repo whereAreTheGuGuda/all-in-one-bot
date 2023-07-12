@@ -18,7 +18,7 @@ prj_name="aio"
 project_dir="/usr/local/bin"
 prj_url="https://api.github.com/repos/whereAreTheGuGuda/all-in-one-bot/releases/latest"
 cfg_path="/usr/local/etc"
-log_url="/var/log"
+log_url="/var/log/"
 assets="Aio-linux-64"
 
 env() {
@@ -89,7 +89,7 @@ add_service() {
 cat > /etc/systemd/system/aio.service << EOF
 [Unit]
 Description=Aio Service
-Documentation=https://github.com/whereAreTheGuGuda/all-in-one-bot
+Documentation=https://github.com/uerax/all-in-one-bot
 After=network.target nss-lookup.target
 
 [Service]
@@ -109,7 +109,7 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 EOF
 
-ln -sf /etc/systemd/system/aio.service /etc/systemd/system/aio.service
+ln -s /etc/systemd/system/aio.service /etc/systemd/system/multi-user.target.wants/aio.service
 
 }
 
@@ -183,8 +183,8 @@ set_cfg() {
 menu() {
     echo -e "${Cyan}——————————————— 脚本信息 ———————————————${Font}"
     echo -e "\t${Yellow}    aio-bot 操作脚本${Font}"
-    echo -e "\t${Yellow}---authored by whereAreTheGuGuda---${Font}"
-    echo -e "\t${Yellow}https://github.com/whereAreTheGuGuda${Font}"
+    echo -e "\t${Yellow}---authored by uerax---${Font}"
+    echo -e "\t${Yellow}https://github.com/uerax${Font}"
     echo -e "\t${Yellow}    版本号：${version}${Font}"
     echo -e "${Cyan}——————————————— 操作向导 ———————————————${Font}"
     echo -e "${Green}1)   一键安装${Font}"
