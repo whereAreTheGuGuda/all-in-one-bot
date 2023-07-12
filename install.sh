@@ -109,7 +109,7 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 EOF
 
-ln -s /etc/systemd/system/aio.service /etc/systemd/system/multi-user.target.wants/aio.service
+ln -sf /etc/systemd/system/aio.service /etc/systemd/system/multi-user.target.wants/aio.service
 
 }
 
