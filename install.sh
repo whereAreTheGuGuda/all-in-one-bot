@@ -18,7 +18,7 @@ prj_name="aio"
 project_dir="/usr/local/bin"
 prj_url="https://api.github.com/repos/whereAreTheGuGuda/all-in-one-bot/releases/latest"
 cfg_path="/usr/local/etc"
-log_url="/var/log/"
+log_url="/var/log"
 assets="Aio-linux-64"
 
 env() {
